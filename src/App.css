@@ -23,6 +23,10 @@ ul {
   margin: 0 auto;
 }
 
+.react-calendar__month-view__days__day {
+  height: 90px;
+}
+
 .alltodos {
   display: flex;
   flex-direction: column;
