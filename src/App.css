@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 3rem;
+  background-color: #dfdfdf;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.react-calendar {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.alltodos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+}
+
+.dailytodos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  float: left;
+  width: 40%;
+  margin: 0;
+}
+
+.dailytodos button {
+  margin: 5px;
+}
+
+.singletodo {
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.newtodo {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.backdrop {
+  position: absolute;
+  margin: -3rem;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
