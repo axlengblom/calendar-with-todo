@@ -19,7 +19,7 @@ ul {
 
 .react-calendar {
   width: 500px;
-  height: 500px;
+  height: min-content;
   margin: 0 auto;
 }
 
