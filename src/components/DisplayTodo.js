@@ -15,6 +15,7 @@ const DisplayTodo = (props) => {
           noTodos = false;
         }
       }
+
       renData = todosToDisplay.map(({ todo, savedDate, id, finished }) => {
         return (
           <li key={id} className="singletodo">
@@ -52,6 +53,7 @@ const DisplayTodo = (props) => {
         }
       }
     }
+    props.onUpdate(new Date(props.dateToLookUp));
   };
   const changeFinished = (idToChange) => {
     const fetchedTodos = JSON.parse(localStorage.getItem("todoList"));
@@ -65,6 +67,7 @@ const DisplayTodo = (props) => {
         }
       }
     }
+    props.onUpdate(new Date(props.dateToLookUp));
   };
 
   return (
@@ -72,7 +75,7 @@ const DisplayTodo = (props) => {
       <h1 onChange={lookupTodos()}>
         {props.dateToLookUp} {noTodos ? "" : "Deadlines:"}
       </h1>
-      <ul onChange={lookupTodos()}>{renData}</ul>
+      <ul>{renData}</ul>
     </div>
   );
 };

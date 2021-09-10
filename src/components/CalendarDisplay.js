@@ -10,10 +10,6 @@ import Backdrop from "./Backdrop";
 const CalendarDisplay = () => {
   const [dateState, setDateState] = useState(new Date());
 
-  // const date = new Date();
-
-  // console.log(moment(date).format("L"));
-
   const calendarDates = useRef();
 
   const changeDateState = (e) => {
@@ -57,7 +53,6 @@ const CalendarDisplay = () => {
         value={dateState}
         onChange={changeDateState}
         onClickDay={newTodo}
-        // tileContent={tileContent}
         tileContent={({ date }) => {
           if (fetchedTodos != null) {
             if (
@@ -84,7 +79,10 @@ const CalendarDisplay = () => {
 
       <DisplayTodos />
 
-      <DisplayTodo dateToLookUp={moment(dateState).format("L")} />
+      <DisplayTodo
+        onUpdate={changeDateState}
+        dateToLookUp={moment(dateState).format("L")}
+      />
     </div>
   );
 };
