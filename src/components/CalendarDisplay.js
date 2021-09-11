@@ -83,6 +83,7 @@ const CalendarDisplay = () => {
         onUpdate={changeDateState}
         dateToLookUp={moment(dateState).format("L")}
       />
+      <div className="lookgooddiv"></div>
     </div>
   );
 };
