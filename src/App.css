@@ -17,6 +17,11 @@ ul {
   flex-wrap: wrap;
 }
 
+.header {
+  width: 100%;
+  text-align: center;
+}
+
 .react-calendar {
   width: 500px;
   height: min-content;
